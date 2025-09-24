@@ -53,7 +53,7 @@ const AboutCTA = () => {
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero/modern-apartment-building-with-numerous-windows-and-balconies_49091535.jpeg"
+          src="/images/hero/hero.jpg"
           alt="Luxury development"
           fill
           className="object-cover"

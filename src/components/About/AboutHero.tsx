@@ -16,7 +16,7 @@ const AboutHero = () => {
       {/* Background Image with Multiple Overlays */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero/modern-apartment-building-with-numerous-windows-and-balconies_49091535.jpeg"
+          src="/images/hero/hero.jpg"
           alt="Luxury real estate"
           fill
           className="object-cover"

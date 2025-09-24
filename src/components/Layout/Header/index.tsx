@@ -12,10 +12,11 @@ import { Button, Drawer, DrawerBody, DrawerContent } from "@heroui/react";
 // Navigation configuration - edit this array to modify navigation items
 const navigationItems = [
   { name: "Home", href: "/" },
-  // { name: "Plots", href: "/explore?type=plots" },
-  { name: "Homes", href: "/explore?type=homes" },
-  { name: "Apartments", href: "/explore?type=apartments" },
+  { name: "Menu", href: "/menu" },
   { name: "About", href: "/about" },
+  { name: "Reservations", href: "/reservations" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contactus" },
   { name: "Blogs", href: "/blogs" },
 ];
@@ -204,7 +205,7 @@ const Header: React.FC = () => {
 
             <div className={`hidden md:block`}>
               <Link
-                href="tel:+1-212-456-789"
+                href="tel: +60 11-3794 1806"
                 className={`text-base text-inherit flex items-center gap-2 transition-colors duration-200 ${
                   isHomepage
                     ? sticky
@@ -214,7 +215,7 @@ const Header: React.FC = () => {
                 }`}
               >
                 <Icon icon={"ph:phone-bold"} width={24} height={24} />
-                +1-212-456-789
+                +60 11-3794 1806
               </Link>
             </div>
 
@@ -297,12 +298,12 @@ const Header: React.FC = () => {
                       </nav>
                       <div className="px-6 py-4 border-t border-gray-200 dark:border-gray-700 mt-auto">
                         <Link
-                          href="tel:+1-212-456-789"
+                          href="tel: +60 11-3794 1806"
                           onClick={() => setNavbarOpen(false)}
                           className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200"
                         >
                           <Icon icon="ph:phone-bold" width={20} height={20} />
-                          <span>+1-212-456-789</span>
+                          <span> +60 11-3794 1806</span>
                         </Link>
                       </div>
                     </DrawerBody>
