@@ -1,113 +1,102 @@
+"use client";
 import type React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button, Chip } from "@heroui/react";
+import { HeartIcon, MapPinIcon, StarIcon } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen overflow-hidden ">
-      {/* Background Image with Enhanced Overlay */}
+    <section className="relative h-screen overflow-hidden bg-white">
+      {/* Background Image with Clean Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero/hero.jpg"
-          alt="Luxury apartments in DHA Islamabad"
+          alt="Authentic Pakistani cuisine at Taste of Pakistan"
           fill
           priority
           className="object-cover object-center"
           unoptimized={true}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center mt-24 xl:mt-28 2xl:mt-40 ">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 flex items-center mt-20 xl:mt-24 2xl:mt-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className=" gap-16 items-center">
             {/* Text Content */}
-            <div className="space-y-8">
+            <div className="space-y-10">
               <div className="space-y-6">
-                <h1 className="text-6xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] tracking-tight text-balance">
-                  Live{" "}
-                  <span className="bg-primary bg-clip-text text-transparent">
-                    Luxury
-                  </span>
-                  .
+                <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.85] tracking-tight">
+                  Taste <span className="text-primary">of</span> Pakistan
                 </h1>
-                <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl text-pretty font-light">
-                  Discover exclusive plots and luxury apartments in DHA
-                  Islamabad with Arham Real Estate. Secure investments, modern
-                  living, and timeless elegance all in one prestigious
-                  community.
+
+                <p className="text-xl sm:text-2xl lg:text-2xl text-white/95 leading-relaxed max-w-2xl font-light">
+                  Experience authentic Pakistani flavors crafted with
+                  traditional recipes and premium ingredients. From aromatic
+                  biryanis to tender karahi, discover the true essence of
+                  Pakistani cuisine.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Button
-                  asChild
+                  as={Link}
+                  href="/menu"
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold rounded-none transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/25"
+                  color="primary"
+                  className="px-10 py-7 text-lg font-bold text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <Link href="/contactus">Get in Touch</Link>
+                  View Our Menu
                 </Button>
                 <Button
-                  variant="outline"
+                  as={Link}
+                  href="/reservations"
+                  variant="bordered"
                   size="lg"
-                  className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white cursor-pointer hover:text-card-foreground px-8 py-6 text-lg font-semibold rounded-none transition-all duration-300 hover:scale-105"
+                  className="border-3 border-white bg-white/20 backdrop-blur-lg text-white px-10 py-7 text-lg font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 hover:scale-105"
                 >
-                  View Properties
+                  Make Reservation
                 </Button>
               </div>
-            </div>
 
-            <div className="hidden md:flex lg:justify-self-end">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 lg:p-10 shadow-2xl">
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="text-center space-y-2">
-                    <p className="text-3xl lg:text-4xl font-bold text-white">
-                      500+
-                    </p>
-                    <p className="text-sm lg:text-base text-white/70 font-medium">
-                      Premium Properties
-                    </p>
-                  </div>
-                  <div className="text-center space-y-2">
-                    <p className="text-3xl lg:text-4xl font-bold text-white">
-                      $2.5B+
-                    </p>
-                    <p className="text-sm lg:text-base text-white/70 font-medium">
-                      Properties Sold
-                    </p>
-                  </div>
-                  <div className="text-center space-y-2">
-                    <p className="text-3xl lg:text-4xl font-bold text-white">
-                      15+
-                    </p>
-                    <p className="text-sm lg:text-base text-white/70 font-medium">
-                      Years Experience
-                    </p>
-                  </div>
-                  <div className="text-center space-y-2">
-                    <p className="text-3xl lg:text-4xl font-bold text-white">
-                      98%
-                    </p>
-                    <p className="text-sm lg:text-base text-white/70 font-medium">
-                      Client Satisfaction
-                    </p>
-                  </div>
-                </div>
+              {/* Quick Info Tags */}
+              <div className="hidden md:flex flex-wrap gap-3 pt-4">
+                <Chip
+                  startContent={<MapPinIcon className="w-4 h-4" />}
+                  variant="flat"
+                  className="bg-white/20 text-white backdrop-blur-sm px-4 py-2"
+                >
+                  Prime Location
+                </Chip>
+                <Chip
+                  startContent={<HeartIcon className="w-4 h-4" />}
+                  variant="flat"
+                  className="bg-white/20 text-white backdrop-blur-sm px-4 py-2"
+                >
+                  Family Recipes
+                </Chip>
+                <Chip
+                  startContent={<StarIcon className="w-4 h-4" />}
+                  variant="flat"
+                  className="bg-white/20 text-white backdrop-blur-sm px-4 py-2"
+                >
+                  5-Star Rated
+                </Chip>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="flex flex-col items-center space-y-2 text-white/60">
-          <span className="text-sm font-medium tracking-wider uppercase">
-            Scroll
+        <div className="flex flex-col items-center space-y-3 text-white/80">
+          <span className="text-sm font-bold tracking-widest uppercase">
+            Explore Menu
           </span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent animate-pulse" />
+          <div className="w-0.5 h-12 bg-white/60 animate-pulse rounded-full" />
         </div>
       </div>
     </section>

@@ -12,13 +12,11 @@ import { Button, Drawer, DrawerBody, DrawerContent } from "@heroui/react";
 // Navigation configuration - edit this array to modify navigation items
 const navigationItems = [
   { name: "Home", href: "/" },
+  { name: "Our Story", href: "/about" },
   { name: "Menu", href: "/menu" },
-  { name: "About", href: "/about" },
-  { name: "Reservations", href: "/reservations" },
-  { name: "Gallery", href: "/gallery" },
+  { name: "Find Us", href: "/find-us" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contactus" },
-  { name: "Blogs", href: "/blogs" },
 ];
 
 const Header: React.FC = () => {
@@ -161,7 +159,7 @@ const Header: React.FC = () => {
                 <Link
                   key={index}
                   href={item.href}
-                  className={`text-base text-inherit flex items-center gap-2 pr-6 transition-colors duration-200 ${
+                  className={`text-base text-inherit flex items-center font-extrabold gap-2 pr-6 transition-colors duration-200 ${
                     isActive
                       ? "text-primary font-medium"
                       : isHomepage
