@@ -8,14 +8,13 @@ import GetInTouch from "@/components/Home/GetInTouch";
 import FAQ from "@/components/Home/FAQs";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import Services from "@/components/Home/Services";
-import { properties } from "./api/property";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <Categories />
-      <ParallaxScroll items={properties} />
+      <ParallaxScroll />
       <Services />
       <FeaturedProperty />
       <BlogSmall />
