@@ -16,11 +16,15 @@ const featuredDishes = [
     name: "Chicken Biryani",
     slug: "chicken-biryani",
     category: "Rice Dishes",
-    price: "PKR 650",
+    price: "MYR 650",
     spiceLevel: 3,
     isSpecial: true,
     cookTime: "45 mins",
-    images: [{ src: "/images/dishes/chicken-biryani.jpg" }],
+    images: [
+      {
+        src: "https://images.deliveryhero.io/image/fd-my/products/1478348249.jpg",
+      },
+    ],
     description:
       "Aromatic basmati rice layered with tender chicken and traditional spices",
   },
@@ -29,11 +33,15 @@ const featuredDishes = [
     name: "Seekh Kebab",
     slug: "seekh-kebab",
     category: "BBQ",
-    price: "PKR 450",
+    price: "MYR 450",
     spiceLevel: 4,
     isSpecial: false,
     cookTime: "25 mins",
-    images: [{ src: "/images/dishes/seekh-kebab.jpg" }],
+    images: [
+      {
+        src: "https://images.deliveryhero.io/image/fd-my/products/1482119556.jpg",
+      },
+    ],
     description: "Grilled minced meat skewers with aromatic spices",
   },
   {
@@ -41,11 +49,15 @@ const featuredDishes = [
     name: "Karahi Gosht",
     slug: "karahi-gosht",
     category: "Curries",
-    price: "PKR 850",
+    price: "MYR 850",
     spiceLevel: 4,
     isSpecial: true,
     cookTime: "60 mins",
-    images: [{ src: "/images/dishes/karahi-gosht.jpg" }],
+    images: [
+      {
+        src: "https://images.deliveryhero.io/image/fd-my/Products/1478348279.jpg",
+      },
+    ],
     description:
       "Traditional mutton curry cooked in a wok with tomatoes and spices",
   },
@@ -54,36 +66,48 @@ const featuredDishes = [
     name: "Chicken Tikka",
     slug: "chicken-tikka",
     category: "BBQ",
-    price: "PKR 550",
+    price: "MYR 550",
     spiceLevel: 3,
     isSpecial: false,
     cookTime: "30 mins",
-    images: [{ src: "/images/dishes/chicken-tikka.jpg" }],
+    images: [
+      {
+        src: "https://images.deliveryhero.io/image/fd-my/products/1482119556.jpg",
+      },
+    ],
     description:
       "Tender chicken pieces marinated in yogurt and spices, grilled to perfection",
   },
   {
     id: 5,
-    name: "Nihari",
-    slug: "nihari",
-    category: "Traditional",
-    price: "PKR 750",
+    name: "Cheese Naan",
+    slug: "Cheese Naan",
+    category: "Cheese Naan",
+    price: "MYR 750",
     spiceLevel: 3,
     isSpecial: true,
     cookTime: "8 hours",
-    images: [{ src: "/images/dishes/nihari.jpg" }],
+    images: [
+      {
+        src: "https://images.deliveryhero.io/image/fd-my/products/1478348259.jpg",
+      },
+    ],
     description: "Slow-cooked beef stew with aromatic spices, served with naan",
   },
   {
     id: 6,
-    name: "Gulab Jamun",
-    slug: "gulab-jamun",
-    category: "Desserts",
-    price: "PKR 250",
+    name: "Beef Shawarma",
+    slug: "beef-shawarma",
+    category: "BBQ",
+    price: "MYR 250",
     spiceLevel: 0,
     isSpecial: false,
     cookTime: "20 mins",
-    images: [{ src: "/images/dishes/gulab-jamun.jpg" }],
+    images: [
+      {
+        src: "https://images.deliveryhero.io/image/fd-my/Products/1556249601.jpg",
+      },
+    ],
     description: "Sweet milk dumplings soaked in rose-flavored sugar syrup",
   },
 ];

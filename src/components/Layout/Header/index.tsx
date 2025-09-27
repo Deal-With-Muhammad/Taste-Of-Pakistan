@@ -175,32 +175,7 @@ const Header: React.FC = () => {
             })}
           </div>
 
-          <div className="flex items-center gap-1 sm:gap-2 md:gap-6 flex-shrink-0">
-            <Button
-              isIconOnly
-              className="bg-transparent hover:cursor-pointer p-1 sm:p-2"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              <Icon
-                icon={"solar:sun-bold"}
-                width={24}
-                height={24}
-                className={`sm:w-8 sm:h-8 dark:hidden block ${
-                  isHomepage
-                    ? sticky
-                      ? "text-dark"
-                      : "text-white"
-                    : "text-dark"
-                }`}
-              />
-              <Icon
-                icon={"solar:moon-bold"}
-                width={24}
-                height={24}
-                className="sm:w-8 sm:h-8 dark:block hidden text-white"
-              />
-            </Button>
-
+          <div className="flex items-center mr-5">
             <div className={`hidden md:block`}>
               <Link
                 href="tel: +60 11-3794 1806"

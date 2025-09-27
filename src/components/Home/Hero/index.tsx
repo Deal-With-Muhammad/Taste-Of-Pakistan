@@ -28,8 +28,9 @@ const Hero: React.FC = () => {
             {/* Text Content */}
             <div className="space-y-10">
               <div className="space-y-6">
-                <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.85] tracking-tight">
-                  Taste <span className="text-primary">of</span> Pakistan
+                <h1 className="text-6xl sm:text-7xl font-black text-white leading-[0.85] tracking-tight">
+                  <span className="text-primary">Taste </span> of{" "}
+                  <span className="text-green-800"> Pakistan</span>
                 </h1>
 
                 <p className="text-xl sm:text-2xl lg:text-2xl text-white/95 leading-relaxed max-w-2xl font-light">
@@ -53,37 +54,12 @@ const Hero: React.FC = () => {
                 <Button
                   as={Link}
                   href="/reservations"
-                  variant="bordered"
+                  variant="flat"
                   size="lg"
-                  className="border-3 border-white bg-white/20 backdrop-blur-lg text-white px-10 py-7 text-lg font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 hover:scale-105"
+                  className="border-1  bg-white/20 backdrop-blur-lg text-white px-10 py-7 text-lg font-bold rounded-full hover:bg-white/10 hover:text-white transition-all duration-300 hover:scale-105"
                 >
                   Make Reservation
                 </Button>
-              </div>
-
-              {/* Quick Info Tags */}
-              <div className="hidden md:flex flex-wrap gap-3 pt-4">
-                <Chip
-                  startContent={<MapPinIcon className="w-4 h-4" />}
-                  variant="flat"
-                  className="bg-white/20 text-white backdrop-blur-sm px-4 py-2"
-                >
-                  Prime Location
-                </Chip>
-                <Chip
-                  startContent={<HeartIcon className="w-4 h-4" />}
-                  variant="flat"
-                  className="bg-white/20 text-white backdrop-blur-sm px-4 py-2"
-                >
-                  Family Recipes
-                </Chip>
-                <Chip
-                  startContent={<StarIcon className="w-4 h-4" />}
-                  variant="flat"
-                  className="bg-white/20 text-white backdrop-blur-sm px-4 py-2"
-                >
-                  5-Star Rated
-                </Chip>
               </div>
             </div>
           </div>
