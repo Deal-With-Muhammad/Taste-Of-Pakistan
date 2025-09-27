@@ -72,7 +72,7 @@ const Categories = () => {
                 <CardBody className="p-0 relative overflow-hidden">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src="/images/categories/biryani.jpg"
+                      src="https://images.deliveryhero.io/image/fd-my/products/1478348249.jpg"
                       alt="Pakistani Biryani"
                       width={300}
                       height={200}
@@ -107,7 +107,7 @@ const Categories = () => {
                 <CardBody className="p-0 relative overflow-hidden">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src="/images/categories/kebab.jpg"
+                      src="https://images.deliveryhero.io/image/fd-my/products/1482119682.jpg"
                       alt="Pakistani Kebabs"
                       width={300}
                       height={200}
@@ -141,7 +141,7 @@ const Categories = () => {
                 <CardBody className="p-0 relative overflow-hidden">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src="/images/categories/curry.jpg"
+                      src="https://images.deliveryhero.io/image/fd-my/products/1478348278.jpg"
                       alt="Pakistani Curry"
                       width={300}
                       height={200}
@@ -175,7 +175,7 @@ const Categories = () => {
                 <CardBody className="p-0 relative overflow-hidden">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src="/images/categories/sweets.jpg"
+                      src="https://images.deliveryhero.io/image/fd-my/products/1478348291.jpg"
                       alt="Pakistani Sweets"
                       width={300}
                       height={200}
