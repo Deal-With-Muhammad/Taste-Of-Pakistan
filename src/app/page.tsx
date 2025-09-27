@@ -8,7 +8,6 @@ import GetInTouch from "@/components/Home/GetInTouch";
 import FAQ from "@/components/Home/FAQs";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import Services from "@/components/Home/Services";
-import TasteOfPakistanFlavors from "@/components/Services/TasteOfPakistanFlavors";
 
 export default function Home() {
   return (
