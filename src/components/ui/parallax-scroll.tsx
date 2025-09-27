@@ -194,7 +194,7 @@ export const ParallaxScroll = ({
 
         <div
           className={`grid grid-cols-1 md:grid-cols-2 ${
-            isLessColls ? "lg:grid-cols-3" : "lg:grid-cols-4"
+            isLessColls ? "lg:grid-cols-3" : "lg:grid-cols-3"
           } items-start max-w-full mx-auto gap-8 pt-10 md:pb-40`}
         >
           {/* First Part */}
@@ -401,77 +401,6 @@ export const ParallaxScroll = ({
               </motion.div>
             ))}
           </div>
-
-          {/* Fourth Part */}
-          {!isLessColls && (
-            <div className="grid gap-8 md:-mt-16">
-              {secondPart.map((dish, idx) => (
-                <motion.div
-                  onClick={() => handleClick(dish.slug)}
-                  style={{
-                    y: isSmallScreen ? translateFirst : translateSecond,
-                  }}
-                  key={"grid-4" + idx}
-                  className="group relative cursor-pointer"
-                >
-                  <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-gray-800">
-                    <div className="relative overflow-hidden">
-                      <Image
-                        src={dish.images[0].src}
-                        className="h-[280px] md:h-[320px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        height="320"
-                        width="400"
-                        alt={dish.name}
-                        unoptimized={true}
-                      />
-
-                      <div className="absolute top-4 right-4">
-                        <div className="bg-black/70 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-medium flex items-center gap-1">
-                          <Icon
-                            icon={getCategoryIcon(dish.category)}
-                            className="text-sm"
-                          />
-                          {dish.category}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="p-6">
-                      <div className="flex items-start justify-between mb-3">
-                        <div>
-                          <h3 className="text-xl font-bold text-dark dark:text-white mb-1 group-hover:text-primary transition-colors">
-                            {dish.name}
-                          </h3>
-                          <p className="text-primary font-bold text-lg">
-                            {dish.price}
-                          </p>
-                        </div>
-                      </div>
-
-                      <p className="text-dark/70 dark:text-white/70 text-sm leading-relaxed mb-4">
-                        {dish.description}
-                      </p>
-
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          {dish.spiceLevel > 0 && (
-                            <div className="flex items-center gap-1">
-                              {getSpiceIcons(dish.spiceLevel)}
-                            </div>
-                          )}
-                        </div>
-
-                        <div className="flex items-center gap-1 text-xs text-dark/50 dark:text-white/50">
-                          <Icon icon="mdi:clock-outline" />
-                          {dish.cookTime}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
         </div>
       </div>
     </section>
